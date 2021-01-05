@@ -4,7 +4,7 @@ import requests
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job("interval", seconds=15)
+@sched.scheduled_job("interval", minutes=15)
 def update_server():
     url = "https://sentiment-analysis-web-app.herokuapp.com/"
     res = requests.get(url)
